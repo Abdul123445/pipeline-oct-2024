@@ -1,9 +1,9 @@
 pipeline{
     agent any
     environment{
-        GIT_URL='https://github.com/Abdul123445/oct-2024.git'
-        GIT_BRANCH='main'
-        GIT_CREDENTIALS='github'
+        GIT_URL="https://github.com/Abdul123445/oct-2024.git"
+        GIT_BRANCH="main"
+        GIT_CREDENTIALS="github"
     } 
     stages{
         stage('CHECKOUT'){
@@ -17,6 +17,17 @@ pipeline{
                 }
             }
         }
+        stage('CHECK'){
+            steps{
+                sh'''
+                ls -lrt
+                echo $git_branch
+                env
+                '''
+                
+
+            }
+        }    
     }
 }    
 

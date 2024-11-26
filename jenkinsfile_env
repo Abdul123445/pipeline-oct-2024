@@ -18,15 +18,8 @@ pipeline{
             }
         }
     }
+}    
+
     
-        stage('CHECK'){
-            steps{
-              sh '''
-                ls -lrt
-                echo $GIT_BRANCH
-                env
-              '''
-            }
-        }
-    }
+      
 

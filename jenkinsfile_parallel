@@ -29,7 +29,7 @@ pipeline {
 
          stage('STAGE4') {
             steps {
-               sh 'sleep 4'
+               sh 'ls -a'
             }
         }
     }
